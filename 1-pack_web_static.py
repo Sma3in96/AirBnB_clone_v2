@@ -1,4 +1,4 @@
-#/usr/bin/python
+#!/usr/bin/python3
 """ this scprit generate .tgz from content of wen static """
 
 from datetime import datetime
@@ -15,7 +15,7 @@ def do_pack():
     time = datetime.now().strftime('%Y%m%d%H%M%S')
     name = f"web_static_{time}.tgz"
 
-    output = local(f"tar -cf versions/{name} web_static", capture=True)
+    output = local(f"tar -cvzf versions/{name} web_static", capture=True)
     if output.failed:
         return None
     else:
