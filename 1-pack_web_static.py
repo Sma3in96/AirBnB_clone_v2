@@ -12,7 +12,7 @@ def do_pack():
     if not os.path.exists('versions'):
         local("mkdir -p versions")
     
-    time = datetime.now().strftime('%y%m%d%h%m%s')
+    time = datetime.now().strftime('%Y%m%d%H%M%S')
     name = f"web_static_{time}.tgz"
 
     output = local(f"tar -cf versions/{name} web_static", capture=True)
