@@ -45,7 +45,6 @@ def number(n):
     """ print n if its an integer"""
     if isinstance(n, int):
         return f'{n} is a number'
-    return 404
 
 
 if __name__ == '__main__':
