@@ -17,11 +17,11 @@ def hbnb():
     return "HBNB"
 
 
-@app.route('/c/<text>', methods=['GET', 'POST'], strict_slashes=False)
+@app.route('/c/<text>', methods=['GET'], strict_slashes=False)
 def textfunc(text):
     """ print a passed text"""
     text = text.replace('_', ' ')
-    return f"C is {text}"
+    return f"C {text}"
 
 
 if __name__ == '__main__':
