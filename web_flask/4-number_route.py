@@ -43,8 +43,8 @@ def pth():
 @app.route("/number/<n>", strict_slashes=False)
 def number(n):
     """ print n if its an integer"""
-    if type(int(n)) is int:
-        return f'{int(n)} is a number'
+    if isinstance(n, int):
+        return f'{n} is a number'
     return 404
 
 
